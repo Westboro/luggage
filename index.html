@@ -248,10 +248,11 @@
             address: 'Sherwood Park, AB, Canada',
             zoom: 12
         };
-        const romeAirport = {
-            lat: 41.7948,
-            lng: 12.2549,
-            address: 'Rome Fiumicino Airport (FCO), Via dell\'Aeroporto di Fiumicino, Fiumicino, Rome, Italy',
+        const veniceAirport = {
+            // 45.50481296558621, 12.340063462713102
+            lat: 45.5048,
+            lng: 12.3401,
+            address: 'Venice Marco Polo Airport, Venice, Italy',
             zoom: 14
         };
 
@@ -300,7 +301,6 @@
             // check if there is an arrived in url parameter
             const arrivedParam = getUrlParameter('arrived');
             // if arrivedParam is not empty, set arrived to true or false
-            //let arrived = arrivedParam ? arrivedParam === 'true' : (hours > 9 || (hours === 9 && minutes >= 30));
             if (arrivedParam) {
                 arrived = arrivedParam;
             } else {
@@ -312,10 +312,8 @@
             let currentLocation;
             
             if (arrived == true || arrived == 'true') {
-                // Rome Fiumicino Airport location
-                currentLocation = romeAirport;
+                currentLocation = veniceAirport;
             } else {
-                // Sherwood Park, AB location
                 currentLocation = sherwoodPark;
             }
             
